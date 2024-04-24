@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício lâmpada</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>    
+
+</head>
+<body>
+    <h1>Felipe Allan 2Ati</h1>
+    
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <div>
+        <button onclick="document.getElementById('myImage1').src='./imagens/pic_bulbon.gif', document.getElementById('myImage2').src='imagens/pic_bulboff.gif'">Turn on the only light 1</button>
+        <button onclick="document.getElementById('myImage2').src='./imagens/pic_bulbon.gif', document.getElementById('myImage1').src='imagens/pic_bulboff.gif'">Turn off the only light 2</button>
+    </div>
+    <div>
+        <img id="myImage1" src="imagens/pic_bulboff.gif" style="width:100px, margin-left 50px;">
+        <img id="myImage2" src="imagens/pic_bulboff.gif" style="width:100px">
+    </div>
+
+    <script>
+        const myImage1 = document.querySelector('#myImage1')
+        const myImage2 = document.querySelector('#myImage2')
+
+        myImage1.onclick = () => {
+            console.log(myImage1.src.indexOf("imagens/pic_bulbon.gif") != -1)
+            if(myImage1.src.indexOf("imagens/pic_bulbon.gif") != -1){
+                myImage1.src = 'imagens/pic_bulboff.gif'    
+            } else if(myImage1.src.indexOf("imagens/pic_bulboff.gif") != -1){
+                myImage1.src = 'imagens/pic_bulbon.gif'
+            }
+        }
+        myImage2.onclick = () => {
+            console.log(myImage2.src.indexOf("imagens/pic_bulbon.gif") != -1)
+            if(myImage2.src.indexOf("imagens/pic_bulbon.gif") != -1){
+                myImage2.src = 'imagens/pic_bulboff.gif'    
+            } else if(myImage2.src.indexOf("imagens/pic_bulboff.gif") != -1){
+                myImage2.src = 'imagens/pic_bulbon.gif'
+            }
+        }
+    </script>
+        
+</body>
+</html>
+
