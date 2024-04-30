@@ -1,0 +1,3 @@
+Dados do aluno =>
+nome completo: Fulano de Tal Pereira da Silva 
+turma: 1ºano-TI-C

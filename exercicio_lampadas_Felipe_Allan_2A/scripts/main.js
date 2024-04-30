@@ -26,7 +26,7 @@ myImage2.onclick = () => {
     myImage2.src = './imagens/pic_bulboff.gif'
     }
 
-tn2.onclick = () => {
+btn2.onclick = () => {
     myImage2.src = './imagens/pic_bulbon.gif',
     myImage1.src = './imagens/pic_bulboff.gif'
 }
